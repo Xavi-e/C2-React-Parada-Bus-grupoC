@@ -2,13 +2,12 @@
 // identidicador= {68b27c54};
 // clavesKey = {ae7f8c10e50256baea7772a20d5124d3};
 
-import { FormNumeroParada } from "./components/FormNumeroParada";
-
 // parada = {nParada};
 import { NumParada } from "./components/NumParada";
 import { Display } from "./components/Display";
 import { TiempoLinea } from "./components/TiempoLinea";
 import { FormTiempoDeLinea } from "./components/FormTiempoDeLinea";
+import { FormNumeroParada } from "./components/FormNumeroParada";
 
 
 function App() {
@@ -16,10 +15,8 @@ function App() {
     <div className="contenedor">
       <header className="cabecera">
         <NumParada />
-        <div className="display">
-          <Display />
-        </div>
-        <h2>Tiempo para la línea 60: 2 minutos</h2>
+        <Display />
+        <TiempoLinea />
       </header>
       <section className="forms">
         <form>
@@ -29,6 +26,7 @@ function App() {
         </form>
 
         <TiempoLinea />
+
         <FormNumeroParada />
         <FormTiempoDeLinea />
 
