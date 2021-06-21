@@ -1,3 +1,4 @@
+
 // APItmb= https://api.tmb.cat/v1/ibus/stops/{parada}?app_id={identificador}&app_key={clavesKey}
 // identidicador= {68b27c54};
 // clavesKey = {ae7f8c10e50256baea7772a20d5124d3};
@@ -5,36 +6,24 @@
 import { FormNumeroParada } from "./components/FormNumeroParada";
 
 // parada = {nParada};
+import { NumParada } from "./componentes/NumParada";
+import { Display } from "./components/Display";
+
+
 function App() {
   return (
     <div className="contenedor">
       <header className="cabecera">
-        <h1>Parada nº 15</h1>
+        <NumParada />
         <div className="display">
-          <div className="bus">
-            <span className="linea">V16</span>
-            <span className="destino">Universitat</span>
-            <span className="tiempo">10min</span>
-          </div>
-          <div className="bus">
-            <span className="linea">H12</span>
-            <span className="destino">Pla de Palau</span>
-            <span className="tiempo">1min</span>
-          </div>
-          <div className="bus">
-            <span className="linea">32</span>
-            <span className="destino">Barceloneta</span>
-            <span className="tiempo">4min</span>
-          </div>
+          <Display />
         </div>
         <h2>Tiempo para la línea 60: 2 minutos</h2>
       </header>
       <section className="forms">
         <FormNumeroParada />
         <form>
-          <label htmlFor="tiempo-linea">
-            Tiempo para que llegue la línea:{" "}
-          </label>
+          <label htmlFor="tiempo-linea">Tiempo para que llegue la línea: </label>
           <select id="tiempo-linea">
             <option value="">Elige línea</option>
           </select>
