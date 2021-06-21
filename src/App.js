@@ -1,5 +1,6 @@
 import { NumParada } from "./componentes/NumParada";
 import { Display } from "./components/Display";
+import { FormTiempoDeLinea } from "./components/FormTiempoDeLinea";
 
 function App() {
   return (
@@ -17,12 +18,7 @@ function App() {
           <input type="number" id="num-parada" />
           <button type="submit">Buscar</button>
         </form>
-        <form>
-          <label htmlFor="tiempo-linea">Tiempo para que llegue la línea: </label>
-          <select id="tiempo-linea">
-            <option value="">Elige línea</option>
-          </select>
-        </form>
+        <FormTiempoDeLinea />
       </section>
       {/* <header className="cabecera">
         <h2>Bus 109 - Hospital Clínic / Polígon Zona Franca</h2>
