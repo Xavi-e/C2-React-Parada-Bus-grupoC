@@ -9,6 +9,8 @@ import { NumParada } from "./components/NumParada";
 import { Display } from "./components/Display";
 import { TiempoLinea } from "./components/TiempoLinea";
 import { FormTiempoDeLinea } from "./components/FormTiempoDeLinea";
+import { NumParada } from "./components/NumParada";
+import { FormNumeroParada } from "./components/FormNumeroParada";
 
 function App() {
   return (
@@ -16,7 +18,7 @@ function App() {
       <header className="cabecera">
         <NumParada />
         <Display />
-        <h2>Tiempo para la línea 60: 2 minutos</h2>
+        <TiempoLinea />
       </header>
       <section className="forms">
         <form>
@@ -24,7 +26,6 @@ function App() {
           <input type="number" id="num-parada" />
           <button type="submit">Buscar</button>
         </form>
-          <TiempoLinea />
         <FormNumeroParada />
         <FormTiempoDeLinea />
       </section>
