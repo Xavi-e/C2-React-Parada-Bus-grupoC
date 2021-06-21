@@ -7,6 +7,7 @@ import { FormNumeroParada } from "./components/FormNumeroParada";
 // parada = {nParada};
 import { NumParada } from "./components/NumParada";
 import { Display } from "./components/Display";
+import { FormTiempoDeLinea } from "./components/FormTiempoDeLinea";
 
 function App() {
   return (
@@ -21,13 +22,14 @@ function App() {
       <section className="forms">
         <FormNumeroParada />
         <form>
-          <label htmlFor="tiempo-linea">
-            Tiempo para que llegue la línea:{" "}
-          </label>
-          <select id="tiempo-linea">
-            <option value="">Elige línea</option>
-          </select>
+
+          <label htmlFor="num-parada">Parada nº: </label>
+          <input type="number" id="num-parada" />
+          <button type="submit">Buscar</button>
         </form>
+        <FormTiempoDeLinea />
+
+
       </section>
       {/* <header className="cabecera">
         <h2>Bus 109 - Hospital Clínic / Polígon Zona Franca</h2>
