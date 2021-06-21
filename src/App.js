@@ -2,14 +2,11 @@
 // identidicador= {68b27c54};
 // clavesKey = {ae7f8c10e50256baea7772a20d5124d3};
 
-import { FormNumeroParada } from "./components/FormNumeroParada";
-
 // parada = {nParada};
 import { NumParada } from "./components/NumParada";
 import { Display } from "./components/Display";
 import { TiempoLinea } from "./components/TiempoLinea";
 import { FormTiempoDeLinea } from "./components/FormTiempoDeLinea";
-import { NumParada } from "./components/NumParada";
 import { FormNumeroParada } from "./components/FormNumeroParada";
 
 function App() {
