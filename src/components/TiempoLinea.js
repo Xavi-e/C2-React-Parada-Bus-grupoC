@@ -1,13 +1,5 @@
-export const TiempoLinea =(props) => {
+export const TiempoLinea = (props) => {
 
-  return(
-    <>
-     <label htmlFor="tiempo-linea">Tiempo para que llegue la línea: </label>
-          <select id="tiempo-linea">
-            <option value="">Elige línea</option>
-          </select>
-
-    </>
-  );
+  return <h2>Tiempo para la línea 60: 2 minutos</h2>;
 
 };
