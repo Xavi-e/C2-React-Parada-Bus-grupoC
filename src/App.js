@@ -19,17 +19,8 @@ function App() {
         <TiempoLinea />
       </header>
       <section className="forms">
-        <form>
-          <label htmlFor="num-parada">Parada nº: </label>
-          <input type="number" id="num-parada" />
-          <button type="submit">Buscar</button>
-        </form>
-
-        <TiempoLinea />
-
         <FormNumeroParada />
         <FormTiempoDeLinea />
-
       </section>
       {/* <header className="cabecera">
         <h2>Bus 109 - Hospital Clínic / Polígon Zona Franca</h2>
