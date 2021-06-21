@@ -1,4 +1,11 @@
-import { NumParada } from "./componentes/NumParada";
+// APItmb= https://api.tmb.cat/v1/ibus/stops/{parada}?app_id={identificador}&app_key={clavesKey}
+// identidicador= {68b27c54};
+// clavesKey = {ae7f8c10e50256baea7772a20d5124d3};
+
+import { FormNumeroParada } from "./components/FormNumeroParada";
+
+// parada = {nParada};
+import { NumParada } from "./components/NumParada";
 import { Display } from "./components/Display";
 import { FormTiempoDeLinea } from "./components/FormTiempoDeLinea";
 
@@ -13,12 +20,16 @@ function App() {
         <h2>Tiempo para la línea 60: 2 minutos</h2>
       </header>
       <section className="forms">
+        <FormNumeroParada />
         <form>
+
           <label htmlFor="num-parada">Parada nº: </label>
           <input type="number" id="num-parada" />
           <button type="submit">Buscar</button>
         </form>
         <FormTiempoDeLinea />
+
+
       </section>
       {/* <header className="cabecera">
         <h2>Bus 109 - Hospital Clínic / Polígon Zona Franca</h2>
