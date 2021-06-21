@@ -1,6 +1,6 @@
 import { NumParada } from "./componentes/NumParada";
 import { Display } from "./components/Display";
-import { TiempoLinea } from "./components/TiempoLinea";
+import { FormTiempoLinea } from "./components/FormTiempoLinea";
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
           <button type="submit">Buscar</button>
         </form>
         <form>
-          <TiempoLinea />
+          <FormTiempoLinea />
         </form>
       </section>
       {/* <header className="cabecera">
