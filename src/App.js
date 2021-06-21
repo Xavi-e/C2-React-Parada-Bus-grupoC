@@ -1,4 +1,3 @@
-
 // APItmb= https://api.tmb.cat/v1/ibus/stops/{parada}?app_id={identificador}&app_key={clavesKey}
 // identidicador= {68b27c54};
 // clavesKey = {ae7f8c10e50256baea7772a20d5124d3};
@@ -6,9 +5,8 @@
 import { FormNumeroParada } from "./components/FormNumeroParada";
 
 // parada = {nParada};
-import { NumParada } from "./componentes/NumParada";
+import { NumParada } from "./components/NumParada";
 import { Display } from "./components/Display";
-
 
 function App() {
   return (
@@ -23,7 +21,9 @@ function App() {
       <section className="forms">
         <FormNumeroParada />
         <form>
-          <label htmlFor="tiempo-linea">Tiempo para que llegue la línea: </label>
+          <label htmlFor="tiempo-linea">
+            Tiempo para que llegue la línea:{" "}
+          </label>
           <select id="tiempo-linea">
             <option value="">Elige línea</option>
           </select>
