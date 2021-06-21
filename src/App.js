@@ -1,3 +1,7 @@
+// APItmb= https://api.tmb.cat/v1/ibus/stops/{parada}?app_id={identificador}&app_key={clavesKey}
+// identidicador= {68b27c54};
+// clavesKey = {ae7f8c10e50256baea7772a20d5124d3};
+// parada = {nParada};
 function App() {
   return (
     <div className="contenedor">
@@ -29,7 +33,9 @@ function App() {
           <button type="submit">Buscar</button>
         </form>
         <form>
-          <label htmlFor="tiempo-linea">Tiempo para que llegue la línea: </label>
+          <label htmlFor="tiempo-linea">
+            Tiempo para que llegue la línea:{" "}
+          </label>
           <select id="tiempo-linea">
             <option value="">Elige línea</option>
           </select>
