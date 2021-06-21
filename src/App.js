@@ -14,15 +14,12 @@ function App() {
     <div className="contenedor">
       <header className="cabecera">
         <NumParada />
-        <div className="display">
-          <Display />
-        </div>
+        <Display />
         <h2>Tiempo para la línea 60: 2 minutos</h2>
       </header>
       <section className="forms">
         <FormNumeroParada />
         <form>
-
           <label htmlFor="num-parada">Parada nº: </label>
           <input type="number" id="num-parada" />
           <button type="submit">Buscar</button>
