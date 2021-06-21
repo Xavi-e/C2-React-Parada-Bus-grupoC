@@ -1,7 +1,7 @@
 function App() {
   return (
     <div className="contenedor">
-      {/* <header className="cabecera">
+      <header className="cabecera">
         <h1>Parada nº 15</h1>
         <div className="display">
           <div className="bus">
@@ -34,8 +34,8 @@ function App() {
             <option value="">Elige línea</option>
           </select>
         </form>
-      </section> */}
-      <header className="cabecera">
+      </section>
+      {/* <header className="cabecera">
         <h2>Bus 109 - Hospital Clínic / Polígon Zona Franca</h2>
         <h3>Polígon Zona Franca Hospital Clínic</h3>
         <a href="volver a la portada">Volver a la portada</a>
@@ -66,7 +66,7 @@ function App() {
             <a href="ver mapa">ver mapa</a>)
           </li>
         </ul>
-      </section>
+      </section> */}
     </div>
   );
 }
