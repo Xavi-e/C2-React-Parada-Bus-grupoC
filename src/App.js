@@ -6,42 +6,47 @@ import { Display } from "./components/Display";
 import { TiempoLinea } from "./components/TiempoLinea";
 import { FormTiempoDeLinea } from "./components/FormTiempoDeLinea";
 import { FormNumeroParada } from "./components/FormNumeroParada";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function App() {
-  const urlParadas = "https://api.tmb.cat/v1/ibus/stops/";
-  const appId = "68b27c54";
-  const appKey = "ae7f8c10e50256baea7772a20d5124d3";
+  const urlParadas =
+    "https://api.tmb.cat/v1/ibus/stops/2?app_id=68b27c54&app_key=ae7f8c10e50256baea7772a20d5124d3";
   //const identidicador = "68b27c54";
   //const numeroParadaInventada = 2;
-  const [paradas, setParadas] = useState([
+  const paradasInventadas = [
     {
-      routeId: "",
-      line: "",
-      "text-ca": "",
-      "t-in-s": 0,
-      destination: "",
-      "t-in-min": 0,
+      status: "success",
+      data: {
+        ibus: [
+          {
+            routeId: "2271",
+            line: "V27",
+            "text-ca": "3 min",
+            "t-in-s": 190,
+            destination: "Pg. Marítim",
+            "t-in-min": 3,
+          },
+        ],
+      },
     },
-  ]);
-  const [tieneParadas, setTieneParadas] = useState(false);
-  const getParadas = async (parada) => {
-    const response = await fetch(
-      `${urlParadas}${parada}?app_id=${appId}&app_key=${appKey}`
-    );
+  ];
+  const [paradas, setParadas] = useState([]);
+  const getParadas = async () => {
+    const response = await fetch(paradasInventadas);
     const paradasAPI = await response.json();
-    setParadas(paradasAPI.data.ibus);
+    setParadas([...paradas, paradasAPI]);
   };
+
   return (
     <div className="contenedor">
       <header className="cabecera">
         <NumParada />
-        <Display paradas={paradas} />
-        {tieneParadas && <TiempoLinea />}
+        <Display />
+        <TiempoLinea />
       </header>
       <section className="forms">
-        <FormNumeroParada getParadas={getParadas} />
-        {tieneParadas && <FormTiempoDeLinea />}
+        <FormNumeroParada />
+        <FormTiempoDeLinea />
       </section>
     </div>
 
