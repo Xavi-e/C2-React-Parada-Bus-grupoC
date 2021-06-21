@@ -1,7 +1,7 @@
 
 export const Display = () => {
     return (
-        <>
+        <div className="display">
             <div className="bus">
                 <span className="linea">V16</span>
                 <span className="destino">Universitat</span>
@@ -17,6 +17,6 @@ export const Display = () => {
                 <span className="destino">Barceloneta</span>
                 <span className="tiempo">4min</span>
             </div>
-        </>
+        </div>
     );
 };
